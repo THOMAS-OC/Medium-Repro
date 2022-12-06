@@ -2,6 +2,8 @@ body {
     height: 2000px;
 }
 
+/* header */
+
 header {
     top: 0;
     left: 0;
@@ -13,6 +15,49 @@ header {
     z-index: 1;
     transition-duration: 0.5s;
 }
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+    height: 100%;
+    width: 1300px;
+    max-width: 90vw;
+}
+
+.logo{
+    line-height: 75px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.link_nav{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 420px;
+}
+
+li{
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.link__nav__btn{
+    height: 40px;
+    background-color: rgb(26, 137, 23);
+    color: white;
+    width: 110px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    transition-duration: 0.5s;
+    font-weight: bold;
+}
+
+/* Section presentation */
 
 section.present {
     margin-top: 75px;
@@ -92,4 +137,14 @@ section.trending{
     width: 400px;
     height: 120px;
     background-color: green;
+}
+
+/* Smartphone responsive */
+
+@media (max-width: 720px) {
+
+    .link_nav li:not(.link__nav__btn, .link__nav__sign){
+        opacity: 0;
+    }
+
 }
